@@ -98,7 +98,19 @@
             <version>${logback.version}</version>
         </dependency>
     </dependencies>
-    <build>
+         <distributionManagement>
+	   <repository>
+	      <id>nexusRepo</id>
+	      <name>Mithun Technologies Releases Nexus Repository</name>
+	      <url>http://34.239.162.49:8081/repository/maven-releases/</url>
+	    </repository>
+	    <snapshotRepository>
+	      <id>nexusRepo</id>
+	      <name>Mithun Technologies Snapshot Nexus Repository </name>
+	      <url>http://34.239.162.49:8081/repository/maven-snapshots/</url>
+	    </snapshotRepository>    
+       </distributionManagement>
+      <build>
         <plugins>
             <plugin>
                 <groupId>org.eclipse.jetty</groupId>
